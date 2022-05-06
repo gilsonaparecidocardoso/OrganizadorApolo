@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91E5437F-7FE9-4E03-992A-DAB95AA70F73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OrganizadorApolo</RootNamespace>
+    <AssemblyName>OrganizadorApolo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=2.0.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.2.0.1\lib\netstandard2.0\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Asio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Asio.2.0.0\lib\netstandard2.0\NAudio.Asio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Core.2.0.0\lib\netstandard2.0\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Midi, Version=2.0.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Midi.2.0.1\lib\netstandard2.0\NAudio.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi, Version=2.0.0.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Wasapi.2.0.0\lib\netstandard2.0\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinForms, Version=2.0.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinForms.2.0.1\lib\net472\NAudio.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM, Version=2.0.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinMM.2.0.1\lib\netstandard2.0\NAudio.WinMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TagLibSharp, Version=2.2.0.19, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\TagLibSharp-Lidarr.2.2.0.19\lib\net462\TagLibSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CAlbum.cs" />
+    <Compile Include="Controllers\CArtista.cs" />
+    <Compile Include="Controllers\CGenero.cs" />
+    <Compile Include="Controllers\CImagem.cs" />
+    <Compile Include="Controllers\CFaixa.cs" />
+    <Compile Include="Controllers\Database\AlbumDAO.cs" />
+    <Compile Include="Controllers\Database\ArtistaDAO.cs" />
+    <Compile Include="Controllers\Database\Conexao.cs" />
+    <Compile Include="Controllers\Database\GeneroDAO.cs" />
+    <Compile Include="Controllers\Database\ImagemDAO.cs" />
+    <Compile Include="Controllers\Database\FaixaDAO.cs" />
+    <Compile Include="Controllers\Diretorio\Exceptions\EDiretorio.cs" />
+    <Compile Include="Controllers\Diretorio\TrataDiretorio.cs" />
+    <Compile Include="Controllers\Imagem\TrataImagem.cs" />
+    <Compile Include="Controllers\Log\RegistraLog.cs" />
+    <Compile Include="Forms\FAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FAlbum.Designer.cs">
+      <DependentUpon>FAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FColecao.Designer.cs">
+      <DependentUpon>FColecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FFaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FFaixa.Designer.cs">
+      <DependentUpon>FFaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FPlayer.Designer.cs">
+      <DependentUpon>FPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FImportarColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FImportarColecao.Designer.cs">
+      <DependentUpon>FImportarColecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIPrincipal.Designer.cs">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Handler\RoutedEventHandler.cs" />
+    <Compile Include="Functions\TrataData.cs" />
+    <Compile Include="Functions\TrataInteiro.cs" />
+    <Compile Include="Functions\TrataString.cs" />
+    <Compile Include="Models\Interfaces\IArtistaDAO.cs" />
+    <Compile Include="Models\Interfaces\IGeneroDAO.cs" />
+    <Compile Include="Models\Interfaces\IImagemDAO.cs" />
+    <Compile Include="Models\Interfaces\IFaixaDAO.cs" />
+    <Compile Include="Models\Interfaces\ITrataDiretorio.cs" />
+    <Compile Include="Models\Interfaces\ITrataImagem.cs" />
+    <Compile Include="Models\MArtista.cs" />
+    <Compile Include="Models\MGenero.cs" />
+    <Compile Include="Models\Interfaces\IAlbumDAO.cs" />
+    <Compile Include="Models\MAlbum.cs" />
+    <Compile Include="Models\MImagem.cs" />
+    <Compile Include="Models\MFaixa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="APITagLib\CTagLib.cs" />
+    <Compile Include="Vagalume\JSON\Art.cs" />
+    <Compile Include="Vagalume\JSON\Mu.cs" />
+    <Compile Include="Vagalume\JSON\Root.cs" />
+    <Compile Include="Vagalume\JSON\Translate.cs" />
+    <Compile Include="Vagalume\APIVagalume.cs" />
+    <EmbeddedResource Include="Forms\FAlbum.resx">
+      <DependentUpon>FAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FColecao.resx">
+      <DependentUpon>FColecao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FFaixa.resx">
+      <DependentUpon>FFaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FImportarColecao.resx">
+      <DependentUpon>FImportarColecao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FPlayer.resx">
+      <DependentUpon>FPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Images\Musicas\folders_music_89232\all-free-download.com.url" />
+    <None Include="Images\Musicas\folders_music_folder_101251\all-free-download.com.url" />
+    <None Include="Images\Musicas\folder_my_music_100185\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_file_37153\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_file_40845\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_file_99181\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_folder_133\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_folder_37452\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_icons_set_icons_pack_120684\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_storage_37313\all-free-download.com.url" />
+    <None Include="Images\Musicas\music_vinyl_37495\all-free-download.com.url" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\ICO\Knob Add.ico" />
+    <Content Include="Images\ICO\Knob Attention.ico" />
+    <Content Include="Images\ICO\Knob Blue.ico" />
+    <Content Include="Images\ICO\Knob Cancel.ico" />
+    <Content Include="Images\ICO\Knob Download.ico" />
+    <Content Include="Images\ICO\Knob Fast Forward.ico" />
+    <Content Include="Images\ICO\Knob Fast Rewind.ico" />
+    <Content Include="Images\ICO\Knob Favorite.ico" />
+    <Content Include="Images\ICO\Knob Forward.ico" />
+    <Content Include="Images\ICO\Knob Graphite.ico" />
+    <Content Include="Images\ICO\Knob Green.ico" />
+    <Content Include="Images\ICO\Knob Grey.ico" />
+    <Content Include="Images\ICO\Knob Help.ico" />
+    <Content Include="Images\ICO\Knob Info.ico" />
+    <Content Include="Images\ICO\Knob Left.ico" />
+    <Content Include="Images\ICO\Knob Loop Off.ico" />
+    <Content Include="Images\ICO\Knob Loop On.ico" />
+    <Content Include="Images\ICO\Knob Message.ico" />
+    <Content Include="Images\ICO\Knob Orange.ico" />
+    <Content Include="Images\ICO\Knob Pause.ico" />
+    <Content Include="Images\ICO\Knob Play Green.ico" />
+    <Content Include="Images\ICO\Knob Play.ico" />
+    <Content Include="Images\ICO\Knob Purple.ico" />
+    <Content Include="Images\ICO\Knob Record Off.ico" />
+    <Content Include="Images\ICO\Knob Record On.ico" />
+    <Content Include="Images\ICO\Knob Red.ico" />
+    <Content Include="Images\ICO\Knob Refresh.ico" />
+    <Content Include="Images\ICO\Knob Remove Red.ico" />
+    <Content Include="Images\ICO\Knob Remove.ico" />
+    <Content Include="Images\ICO\Knob Search.ico" />
+    <Content Include="Images\ICO\Knob Shuffle Off.ico" />
+    <Content Include="Images\ICO\Knob Shuffle On.ico" />
+    <Content Include="Images\ICO\Knob Smart.ico" />
+    <Content Include="Images\ICO\Knob Snapback.ico" />
+    <Content Include="Images\ICO\Knob Snapforward.ico" />
+    <Content Include="Images\ICO\Knob Stop.ico" />
+    <Content Include="Images\ICO\Knob Upload.ico" />
+    <Content Include="Images\ICO\Knob Valid Blue.ico" />
+    <Content Include="Images\ICO\Knob Valid Green.ico" />
+    <Content Include="Images\imgOrg\13908musicais.jpg" />
+    <Content Include="Images\imgOrg\169582_Papel-de-Parede-Nota-musical_1280x960.jpg" />
+    <Content Include="Images\imgOrg\222813_Papel-de-Parede-Notas-musicais--222813_1600x1200.jpg" />
+    <Content Include="Images\imgOrg\234009_Papel-de-Parede-Musica--234009_1280x1024.jpg" />
+    <Content Include="Images\imgOrg\69342_Papel-de-Parede-Instrumentos-Musicais_1920x1200.jpg" />
+    <Content Include="Images\imgOrg\music-treble-clef-musical-notes-keys.jpg" />
+    <Content Include="Images\imgOrg\musical-notes-explosion.jpg" />
+    <Content Include="Images\imgOrg\notas.jpg" />
+    <Content Include="Images\imgOrg\Papel-de-Parede-Notas-Musicais.jpg" />
+    <Content Include="Images\Knob\Knob Forward.ico" />
+    <Content Include="Images\Knob\Knob Left.ico" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_128.png" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_16.png" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_256.png" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_32.png" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_48.png" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_64.png" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_72.png" />
+    <Content Include="Images\Musicas\files_music_file_93607\Files_Music_File_Icon_96.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_128.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_16.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_256.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_32.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_48.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_64.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_72.png" />
+    <Content Include="Images\Musicas\folders_music_89232\Folders_music_Icon_96.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_128.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_16.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_256.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_32.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_48.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_64.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_72.png" />
+    <Content Include="Images\Musicas\folders_music_folder_101251\Folders_Music_Folder_Icon_96.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_128.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_16.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_256.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_32.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_48.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_64.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_72.png" />
+    <Content Include="Images\Musicas\folder_my_music_100185\Folder_my_music_Icon_96.png" />
+    <Content Include="Images\Musicas\music_file_37153\music file.png" />
+    <Content Include="Images\Musicas\music_file_40845\Music File.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_128.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_16.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_256.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_32.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_48.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_64.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_72.png" />
+    <Content Include="Images\Musicas\music_file_99181\Music_file_Icon_96.png" />
+    <Content Include="Images\Musicas\music_folder_133\httpzcoolcomcnpicpng2new_png2_020Cristal_Intense_101png.png" />
+    <Content Include="Images\Musicas\music_folder_37452\Music Folder.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\128x128\1.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\128x128\2.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\128x128\3.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\128x128\4.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\32x32\1.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\32x32\2.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\32x32\3.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\32x32\4.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\64x64\1.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\64x64\2.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\64x64\3.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\64x64\4.png" />
+    <Content Include="Images\Musicas\music_icons_set_icons_pack_120684\read first.txt" />
+    <Content Include="Images\Musicas\music_storage_37313\Music Storage.png" />
+    <Content Include="Images\Musicas\music_vinyl_37495\music_vinyl.png" />
+    <Content Include="VagalumeAPI.html" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
